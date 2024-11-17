@@ -11,7 +11,7 @@ function addTwoNumbers (number_1 , number_2) { // (number_1 , number_2 is called
 }
 const result = addTwoNumbers(4,9) // (4,9 is called arguments) 
 
-console.log("Result :", result);
+// console.log("Result :", result);
 
 function loginUser (usrename){
     if(!usrename) { // (username === undefined) is first way to declare || (!username) is second way to declare
@@ -24,5 +24,38 @@ function loginUser (usrename){
     }
 }
 
-console.log(loginUser("Yash")) 
-console.log(loginUser()) // Output is undefined
+// console.log(loginUser("Yash")) 
+// console.log(loginUser()) // Output is undefined
+
+
+function calculateCartPrice (val1,val2, ...num1){
+    return num1
+}
+
+// console.log(calculateCartPrice(200,400,600,500,800))
+
+const user = {
+    username : "Radhe Radhe", // First way to declare object 
+    prices : 500
+}
+
+function handleObject(anyobject){
+    console.log(`Username is ${anyobject.username} and price is ${anyobject.price}`);
+    
+}
+
+// handleObject(user)
+handleObject({
+    username : "Radha", // Second way to declare object
+    price : 233
+})
+
+const myNewArray = [200,400,600]
+
+function returnSecondValue (getNewArray){
+    return getNewArray[2]
+}
+
+// console.log(returnSecondValue(myNewArray)); // first way to declare 
+console.log(returnSecondValue([200,400,600])); // second way to declare 
+
