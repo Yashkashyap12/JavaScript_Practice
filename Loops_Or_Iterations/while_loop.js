@@ -1,17 +1,17 @@
 // ************ While Loop ************
 
-// let index = 0
-// while (index <= 10) {
-//     console.log(`Value of index is ${index}`);
-//     index = index + 2
-// }
+let index = 0
+while (index <= 10) {
+    console.log(`Value of index is ${index}`);
+    index = index + 2
+}
 
-// let myArr = ['Radha','Kanha','Shyam']
-// let arr = 0
-// while (arr < myArr.length) {
-//     console.log(`Value is ${myArr[arr]}`);
-//     arr = arr + 1
-// }
+let myArr = ['Radha','Kanha','Shyam']
+let arr = 0
+while (arr < myArr.length) {
+    console.log(`Value is ${myArr[arr]}`);
+    arr = arr + 1
+}
 
 // ********* Do While ************
 
