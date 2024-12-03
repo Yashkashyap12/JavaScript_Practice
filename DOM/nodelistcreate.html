@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NodeListCreating</title>
+</head>
+<body style="background-color: #212121;color:white">
+    
+</body>
+<script>
+   const newDiv =  function (newDiv) {
+    const div = document.createElement('div')
+    console.log(div)
+    div.className = 'main'
+    div.id = 'one'
+    div.setAttribute('title','mytitle')
+    div.style.backgroundColor = 'blue'
+    div.style.padding = '12px'
+    div.style.fontSize = '22px'
+    // div.innerText = 'Raadhe Raadhe'
+    const addText = document.createTextNode('Raadhe Raadhe')
+    div.appendChild(addText)
+
+    document.body.appendChild(div) // to attach on webpage or show the content 
+    }
+    newDiv()
+</script>
+</html>
