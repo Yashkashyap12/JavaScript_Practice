@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: #414141;color:aliceblue;">
+    <h2>Amazing Images</h2>
+    <div>
+        <ul id="images">
+            <!-- <li><img width="200px" id="code" src="https://cdn.pixabay.com/photo/2024/05/20/13/28/ai-generated-8775232_640.png" alt="code" onclick="alert('hello')"></li> // Not a good Practice or approach -->
+            <li><img width="200px" id="code" src="https://cdn.pixabay.com/photo/2024/05/20/13/28/ai-generated-8775232_640.png" alt="code"></li> 
+            <li><img width="200px" id="wolf" src="https://cdn.pixabay.com/photo/2021/05/24/12/19/wolf-6278956_1280.jpg" alt="wolf"></li>
+            <li><img width="200px" id="squirrel" src="https://cdn.pixabay.com/photo/2024/01/27/18/24/squirrel-8536537_1280.jpg" alt="squirrel"></li>
+            <li><img width="200px" id="sunset" src="https://cdn.pixabay.com/photo/2023/01/20/10/15/sunset-7731330_1280.png" alt="sunset"></li>
+            <li><a style="color: antiquewhite" href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    // **************** NOTES ******************
+
+        // document.getElementById('code').onclick = function(){  // This is Not a good practice or approach
+        //   alert('clicked on code');}
+
+        // attachevent() used for internet explorer
+        //jQuery - on
+
+        // type, timestamp, defaultPrevented, target, toElement, srcElement, currentTarget, clientX, clientY, screenX, screenY,
+        // altKey, ctrlKey, shiftKey, keyCode
+
+        // event bubbling (false) bottom to top 
+        // event capturing (true) top to bottom
+    // ------------------------------------------------------------------------------------------------------------------------
+
+    // ************* Basics are Covered *****************
+
+  //   document.getElementById('images').addEventListener('click',function(eventobj){
+  //     alert('clicked on code image')
+  //     console.log("clicked inside the ul");
+  //   },false)
+
+  //   document.getElementById('sunset').addEventListener('click',function(eventobj){
+  //     console.log("clicked sunset");
+  //     eventobj.stopPropagation()
+  //   },false)
+     
+  //   document.getElementById('google').addEventListener('click',function(event){
+  //      event.preventDefault();
+  //      event.stopPropagation()
+  //      console.log("google clicked");
+  //   },false)
+
+    document.querySelector('#images').addEventListener('click',function(event){
+        console.log(event.target.tagName);
+        if(event.target.tagName === 'IMG'){
+            let removeIt = event.target.parentNode
+            removeIt.remove() // first way to remove the element 
+        }
+        // removeIt.parentNode.removeChild(removeIt) // second way to remove the element
+    },false)
+
+</script>
+</html>
